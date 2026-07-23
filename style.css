@@ -1,0 +1,459 @@
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+    min-height:100vh;
+    color:#5A3D47;
+
+    background:linear-gradient(-45deg,
+        #ffd6e8,
+        #ffc4d6,
+        #fff0f5,
+        #ffdce8);
+
+    background-size:400% 400%;
+    animation:gradient 12s ease infinite;
+}
+
+/* ==========================================
+   FONDO
+========================================== */
+
+@keyframes gradient{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+
+}
+
+.background{
+
+    position:fixed;
+    inset:0;
+
+    background:
+    radial-gradient(circle at top,#ffffff66,transparent 40%),
+    radial-gradient(circle at bottom,#ff8fab55,transparent 40%);
+
+    z-index:-2;
+
+}
+
+/* ==========================================
+   CORAZONES
+========================================== */
+
+.hearts{
+
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:-1;
+
+}
+
+.hearts::before,
+.hearts::after{
+
+    content:"❤️";
+    position:absolute;
+    font-size:28px;
+    opacity:.18;
+    animation:floatHeart 12s linear infinite;
+
+}
+
+.hearts::before{
+
+    left:15%;
+    bottom:-50px;
+
+}
+
+.hearts::after{
+
+    right:20%;
+    bottom:-120px;
+    animation-duration:16s;
+
+}
+
+@keyframes floatHeart{
+
+    0%{
+
+        transform:translateY(0) rotate(0deg);
+        opacity:0;
+
+    }
+
+    10%{
+
+        opacity:.25;
+
+    }
+
+    100%{
+
+        transform:translateY(-120vh) rotate(360deg);
+        opacity:0;
+
+    }
+
+}
+
+/* ==========================================
+   SECCIONES
+========================================== */
+
+section{
+
+    min-height:100vh;
+
+    display:none;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:40px;
+
+}
+
+section.active{
+
+    display:flex;
+
+}
+
+/* ==========================================
+   TARJETAS
+========================================== */
+
+.card,
+.form-card,
+.thanks-card{
+
+    width:min(900px,95%);
+    padding:50px;
+
+    border-radius:28px;
+
+    background:rgba(255,255,255,.45);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.6);
+
+    box-shadow:
+    0 25px 50px rgba(0,0,0,.12);
+
+    animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+.card h1,
+.form-card h1,
+.thanks-card h1{
+
+    font-family:"Great Vibes",cursive;
+    font-size:70px;
+    color:#d6336c;
+    text-align:center;
+
+}
+
+.card h2,
+.form-card h2,
+.thanks-card h2{
+
+    text-align:center;
+    margin:20px 0;
+    font-size:32px;
+    color:#c2185b;
+
+}
+
+.card p,
+.thanks-card p{
+
+    line-height:1.9;
+    text-align:center;
+    font-size:18px;
+
+}
+
+/* ==========================================
+   FORMULARIO
+========================================== */
+
+form{
+
+    margin-top:40px;
+
+}
+
+.input-group{
+
+    display:flex;
+    flex-direction:column;
+
+    margin-bottom:28px;
+
+}
+
+label{
+
+    font-weight:600;
+    margin-bottom:10px;
+    color:#a4135b;
+
+}
+
+input,
+textarea{
+
+    border:none;
+
+    padding:16px;
+
+    border-radius:15px;
+
+    background:#ffffffdd;
+
+    font-size:16px;
+
+    transition:.25s;
+
+}
+
+textarea{
+
+    resize:vertical;
+    min-height:120px;
+
+}
+
+input:focus,
+textarea:focus{
+
+    outline:none;
+
+    box-shadow:
+    0 0 0 4px #ff8fab55;
+
+    transform:scale(1.01);
+
+}
+
+/* ==========================================
+   SLIDER
+========================================== */
+
+input[type=range]{
+
+    cursor:pointer;
+
+}
+
+#loveValue{
+
+    text-align:center;
+    margin-top:12px;
+
+    font-size:22px;
+    font-weight:bold;
+    color:#d6336c;
+
+}
+
+/* ==========================================
+   BOTONES
+========================================== */
+
+button{
+
+    cursor:pointer;
+
+    border:none;
+
+    border-radius:40px;
+
+    padding:18px 40px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    color:white;
+
+    background:linear-gradient(135deg,#ff4d6d,#ff8fab);
+
+    transition:.3s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+button:hover{
+
+    transform:translateY(-4px) scale(1.03);
+
+    box-shadow:
+    0 20px 40px rgba(255,77,109,.35);
+
+}
+
+button::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-120px;
+    top:0;
+
+    width:80px;
+    height:100%;
+
+    background:rgba(255,255,255,.4);
+
+    transform:skewX(-25deg);
+
+    transition:.6s;
+
+}
+
+button:hover::before{
+
+    left:130%;
+
+}
+
+/* ==========================================
+   CARTA
+========================================== */
+
+.letter{
+
+    width:340px;
+    height:240px;
+
+    background:#fff;
+
+    border-radius:18px;
+
+    position:relative;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.18);
+
+    overflow:hidden;
+
+}
+
+.letter-top{
+
+    height:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:70px;
+
+    background:#ffb3d1;
+
+}
+
+.letter-bottom{
+
+    height:50%;
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:18px;
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:768px){
+
+.card,
+.form-card,
+.thanks-card{
+
+    padding:28px;
+
+}
+
+.card h1,
+.form-card h1,
+.thanks-card h1{
+
+    font-size:52px;
+
+}
+
+.card h2,
+.form-card h2{
+
+    font-size:26px;
+
+}
+
+button{
+
+    width:100%;
+
+}
+
+}

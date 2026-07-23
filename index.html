@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>❤️ Para el amor de mi vida ❤️</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Corazones -->
+    <div class="hearts"></div>
+
+    <!-- Fondo -->
+    <div class="background"></div>
+
+    <!-- Música -->
+    <audio id="music" loop>
+        <source src="assets/music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Pantalla Bienvenida -->
+    <section class="welcome-screen active">
+        <div class="card">
+            <h1>❤️</h1>
+            <h2>Para la persona más hermosa del mundo</h2>
+            <p>
+                Antes de comenzar...<br><br>
+                Quiero que sepas que este formulario<br>
+                no tiene respuestas correctas.<br><br>
+                Solamente quiero conocer un poquito más<br>
+                todo lo que sentís por nosotros.
+            </p>
+            <button id="startButton">Comenzar ❤️</button>
+        </div>
+    </section>
+
+    <!-- Carta -->
+    <section class="letter-screen">
+        <div class="letter">
+            <div class="letter-top">💌</div>
+            <div class="letter-bottom">
+                <h2>Abrí esta carta</h2>
+                <button id="openLetter">Abrir ❤️</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario -->
+    <section class="form-screen">
+        <div class="form-card">
+            <h1>Nuestro Formulario ❤️</h1>
+
+            <form id="loveForm" action="https://formsubmit.co/lasherasnacho3f@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="❤️ Nuevo formulario para Nacho ❤️">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_autoresponse" value="Gracias mi amor ❤️ Recibí tu formulario y lo leí todo. Te amo muchísimo!">
+
+                <div class="input-group">
+                    <label>¿Cómo te llamás?</label>
+                    <input type="text" name="nombre" required>
+                </div>
+
+                <div class="input-group">
+                    <label>¿Cómo te enamoraste de mí?</label>
+                    <textarea name="pregunta1" required></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label>¿Cuándo te enamoraste de mí?</label>
+                    <textarea name="pregunta2" required></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label>¿Qué es lo que más te gusta de mí?</label>
+                    <textarea name="pregunta3" required></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label>¿Qué es lo que menos te gusta de mí?</label>
+                    <textarea name="pregunta4" required></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label>¿Qué cambiarías de mí?</label>
+                    <textarea name="pregunta5" required></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label>Tres cosas por las que te parezco lindo ❤️</label>
+                    <input type="text" name="lindo1" required>
+                    <input type="text" name="lindo2" required>
+                    <input type="text" name="lindo3" required>
+                </div>
+
+                <div class="input-group">
+                    <label>¿Cuál fue el plan que menos te gustó hacer conmigo?</label>
+                    <textarea name="pregunta6" required></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label>¿Cuál fue el plan que más te gustó?</label>
+                    <textarea name="pregunta7" required></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label>¿Qué plan tenés muchas ganas de hacer conmigo?</label>
+                    <textarea name="pregunta8" required></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label>¿Cuánto me amás? ❤️</label>
+                    <input type="range" id="loveRange" name="amor" min="0" max="1000" value="500">
+                    <span id="loveValue">500 ❤️</span>
+                </div>
+
+                <button type="submit" class="submitButton">
+                    💌 Enviarme tu corazón
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Pantalla Final -->
+    <section class="thanks-screen">
+        <div class="thanks-card">
+            <h1>❤️</h1>
+            <h2>Gracias mi amor</h2>
+            <p>
+                Tus respuestas llegaron a mi corazón.<br><br>
+                Te amo muchísimo ❤️
+            </p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
